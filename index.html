@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brendan Lynch</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div id="rhs">
+            <label id="darkmode-switch" class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="content">
+            <div id="lhs">
+                <div>
+                    <h4 class="hi-im">Hi, I'm</h4>  
+                    <h1 class="name">Brendan Lynch</h1>
+                    <p>&bull; Born in Powell River. Educated at UVic (<b>BSc in Computer Science, 2025</b>).</p>
+                    <p>&bull; Raised on Lego, now addicted to building. An avid problem diagnoser and solution finder.</p>
+                    <p>&bull; Passion for building tools that help people solve problems.</p>
+                    <p>&bull; <b>Dream Project:</b> An open source e-ink smartphone with a viewfinder.</p>
+                </div>
+                <div id="filters">
+                    <ul>
+                        <li id="code" class="selected">code</li>
+                        <li id="pottery">pottery</li>
+                        <li id="woodwork">woodwork</li>
+                        <li id="sewing">sewing</li>
+                        <!-- <li id="photography">photography</li>
+                        <li id="volunteering">volunteering</li>
+                        <li id="travel">travel</li>
+                        <li id="books">books</li> -->
+                    </ul>
+                </div>
+            </div>
+            <img class="headshot" src="assets/headshot2.png" alt="">
+            <ul class="contact">
+                <li class="clickable"><a href="mailto:directbrendan@gmail.com?subject=Job%20Interview%20Request">
+                    <img class="contact-icon" src="assets/email.svg" alt="">directbrendan@gmail.com
+                </a></li>
+                <li class="">
+                    <img class="contact-icon" src="assets/phone.svg" alt="">250-701-5417
+                </li>
+                <li class="">
+                    <img class="contact-icon" src="assets/location.svg" alt="">Waterloo, ON
+                </li>
+                <li class="clickable"><a href="https://github.com/brendanml">
+                    <img class="contact-icon" src="assets/github.svg" alt="">brendanml
+                </a></li>
+                <li class="clickable"><a href="https://www.youtube.com/@uhhbml">
+                    <img class="contact-icon" src="assets/youtube.svg" alt="">bml
+                </a></li>
+            </ul>
+            <div id="code-container" class="card-container active">
+                <div id="dafig" class="card">
+                    <div class="card-content">
+                        <div>
+                            <h3>dafig</h3>
+                            <p>lego purchasing & pricing analytics tool.</p>
+                        </div>
+                        <div class="foot">
+                            <ul class="tool-container">
+                                <li class="tool">React</li>
+                                <li class="tool">NodeJS</li>
+                                <li class="tool">MongoDB</li>
+                                <li class="tool">Python</li>
+                                <li class="tool">Express</li>
+                                <li class="tool">HTML5</li>
+                                <li class="tool">CSS3</li>
+                            </ul>
+                            <ul class="external-links">
+                                <li><a href="https://github.com/brendanml/dafig"><img class="link-icon" src="assets/github.svg" alt=""></a></li>
+                                <!-- <li><img class="link-icon" src="assets/youtube.svg" alt=""></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <img class="bg-img" src="assets/minfig.png" alt="">
+                </div>
+                <div id="shallowmind" class="card">
+                    <div class="card-content">
+                        <div>
+                            <h3>shallowmind</h3>
+                            <p>ai chess bot & co-op chess game.</p>
+                        </div>
+                        <div class="foot">
+                            <ul class="tool-container">
+                                <li class="tool">C</li>
+                                <li class="tool">C++</li>
+                                <li class="tool">raylib</li>
+                            </ul>
+                            <ul class="external-links">
+                                <li><a href="https://github.com/brendanml/shallowmind"><img class="link-icon" src="assets/github.svg" alt=""></a></li>
+                                <li><a href="https://www.youtube.com/watch?v=kNM1cPyCSfA&t=18s"><img class="link-icon" src="assets/youtube.svg" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <img class="bg-img" src="assets/chess.svg" alt="">
+                </div>
+                <div id="algovis" class="card">
+                    <div class="card-content">
+                        <div>
+                            <h3>algovis</h3>
+                            <p>pathfinding algorithm visualizer for the land-grid problem.</p>
+                        </div>
+                        <div class="foot">
+                            <ul class="tool-container">
+                                <li class="tool">HTML5</li>
+                                <li class="tool">JavaScript<li>
+                                <li class="tool">CSS3</li>
+                            </ul>
+                            <ul class="external-links">
+                                <li><a href="https://github.com/brendanml/algovis"><img class="link-icon" src="assets/github.svg" alt=""></a></li>
+                                <li><a href="https://brendanml.github.io/algovis/"><img class="link-icon" src="assets/website.svg" alt=""></a></li>
+                                <!-- <li><img class="link-icon" src="assets/youtube.svg" alt=""></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <img class="bg-img" src="assets/algovis.svg" alt="">
+                </div>
+                <div id="worldpainter" class="card">
+                    <div class="card-content">
+                        <div>
+                            <h3>worldpainter</h3>
+                            <p>2D tile based world making tool.</p>
+                        </div>
+                        <div class="foot">
+                            <ul class="tool-container">
+                                <li class="tool">C</li>
+                                <li class="tool">C++<li>
+                                <li class="tool">raylib</li>
+                            </ul>
+                            <ul class="external-links">
+                                <li><a href="https://github.com/brendanml/worldpainter"><img class="link-icon" src="assets/github.svg" alt=""></a></li>
+                                <!-- <li><img class="link-icon" src="assets/youtube.svg" alt=""></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <img class="bg-img" src="assets/world.svg" alt="">
+                </div>
+                <div id="aidy" class="card">
+                    <div class="card-content">
+                        <div>
+                            <h3>aidy_fork</h3>
+                            <p>dna sequencing machine learning pipeline.</p>
+                        </div>
+                        <div class="foot">
+                            <ul class="tool-container">
+                                <li class="tool">Python</li>
+                                <li class="tool">TensorFlow<li>
+                                <li class="tool">samtools<li>
+                            </ul>
+                            <ul class="external-links">
+                                <li><a href="https://github.com/brendanml/aidy_fork"><img class="link-icon" src="assets/github.svg" alt=""></a></li>
+                                <!-- <li><img class="link-icon" src="assets/youtube.svg" alt=""></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <img class="bg-img" src="assets/dna.svg" alt="">
+                </div>
+            
+            </div>
+                
+            <div id="woodwork-container" class="card-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>kitchen cart</h3>
+                        <p>A cart I made in summer 2023 with one broken arm.</p>
+                    </div>
+                    <img class="gram" src="assets/kitchen_cart.jpeg" alt="">
+                </div>
+            </div>
+            <div id="sewing-container" class="card-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>tool roll</h3>
+                        <p>a gift I made for my girlfriend.</p>
+                    </div>
+                    <img class="gram" src="assets/tool_roll.png" alt="">
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>tote bag</h3>
+                        <p>my first project.</p>
+                    </div>
+                    <img class="gram" src="assets/tote.png" alt="">
+                </div>
+            </div>
+            <div id="pottery-container" class="card-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>bowl</h3>
+                        <p>Thrown on the wheel.</p>
+                    </div>
+                    <img class="gram" src="assets/bowl.png" alt="">
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>pitcher</h3>
+                        <p>slab rolled, scored and slipped.</p>
+                    </div>
+                    <img class="gram" src="assets/pitcher.png" alt="">
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>duck</h3>
+                        <p>double pinch pot.</p>
+                    </div>
+                    <img class="gram" src="assets/duck.png" alt="">
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>mug</h3>
+                        <p>an attempt at "stoneware".</p>
+                    </div>
+                    <img class="gram" src="assets/mug.png" alt="">
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>mushroom pot</h3>
+                        <p>my first completed project.</p>
+                    </div>
+                    <img class="gram" src="assets/mushroom.png" alt="">
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>dish tool holder</h3>
+                        <p>stylish with utility.</p>
+                    </div>
+                    <img class="gram" src="assets/dishtool.png" alt="">
+                </div>
+            </div>
+            <div id="photography-container" class="card-container">
+                <div class="card">
+                    <h3>dafig</h3>
+                    <p>Lego purchasing & pricing analytics tool.</p>
+                </div>
+            </div>
+            <div id="volunteering-container" class="card-container">
+                <div class="card">
+                    <h3>dafig</h3>
+                    <p>Lego purchasing & pricing analytics tool.</p>
+                </div>
+            <div id="travel-container" class="card-container">
+                <div class="card">
+                    <h3>dafig</h3>
+                    <p>Lego purchasing & pricing analytics tool.</p>
+                </div>
+            </div>
+            <div id="books-container" class="card-container">
+                <div class="card">
+                    <h3>dafig</h3>
+                    <p>Lego purchasing & pricing analytics tool.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="back-to-top">
+            back to top &#8593
+        </div>
+    </main>
+    <img class="waves" src="assets/waves.svg" alt="">
+    <!-- <div class="stomach">
+        <h1>Brendan Lynch</h1>
+        <div class="section intro">
+            <h2>Me in 10 seconds</h2>
+            <ul>
+                <li>I've worked as a letter carrier and a furniture maker.</li>
+                <li>I'm driven by building. Woodwork, sewing, pottery, and programming.</li>
+                <li>Born in Powell River and raised in the Cowichan Valley. I now live in beautiful Victoria, BC</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Want to know more??</h2>
+        </div>
+        <div class="section">
+            <h2>what I'm doing now</h2>
+        </div>
+    </div>
+    <div class="foot"></div> -->
+</body>
+</html>

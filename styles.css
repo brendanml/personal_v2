@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@font-face {
+  font-family: 'Recoleta-Light';
+  src: url('fonts/Recoleta\ Light.otf') format('opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Recoleta-Black';
+  src: url('fonts/Recoleta\ Black.otf') format('opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Recoleta-Medium';
+  src: url('fonts/Recoleta\ Medium.otf') format('opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+   :root {
+    /* Colors */
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --accent-color: #0496FF;
+    --accent-color-two: #0E273C;
+    --shadow-color: grey;
+    
+    /* Typography */
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: "IBM Plex Mono", serif;
+    --font-heading-light: 'Recoleta-Light', serif;
+    --font-heading-medium: 'Recoleta-Medium', serif;
+    --font-heading-bold: 'Recoleta-Black', serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+    --bg-filter: brightness(1);
+    --bg-filter-dark: brightness(1);
+    
+    /* Misc */
+    --border-radius: 3px; /* Global radius for buttons, cards, etc. */
+    --nav-height: 2rem;
+    --content-margin: 2rem;
+    --grid-gap: .5rem;
+  }
+  /* Dark mode */
+  .dark-mode {
+    --bg-color: #1e1b1b;
+    --text-color: #ffffff;
+    --accent-color: #A167A5;
+    --accent-color-two: #254a69;
+    --shadow-color: rgb(72, 70, 70);
+    --bg-filter: invert(88.1%) hue-rotate(90deg);
+    --bg-filter-dark: invert(20%);
+  }
+  
+  
+  /* ---------------------------
+     2) Reset / Base Styles
+     --------------------------- */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 100%; /* 16px by default in most browsers */
+  }
+  
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font--primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ---------------------------
+     3) Typography
+     --------------------------- */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Bold headings */
+    margin-bottom: 0.5em;
+  }
+  
+  p {
+    font-size: clamp(16px, 2vw, 20px);
+  }
+
+  b, strong {
+    font-weight: bold;
+    font-size: inherit; /* Prevents size changes */
+  }
+
+
+  
+
+
+  ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  /* ---------------------------
+     4) Utility Classes
+     --------------------------- */
+  
+  /* Center a container with fixed width */
+  .container {
+    max-width: 800px; /* Adjust to preference */
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* Simple button style */
+  .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-accent);
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font: inherit;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  
+  .btn:hover {
+    background-color: darken(var(--color-accent), 10%);
+  }
+  
+  /* Basic footer at the bottom */
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #ddd;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #777;
+  }
+
+  /* MY STYLICS */
+  
+  body {
+    font-family: var(--font-primary);
+    display: grid;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+ }
+
+
+
+/* DARK MODE SWITCH */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+/* Hide default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider (switch appearance) */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--accent-color);
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+/* Circle inside the slider */
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* Move toggle when checked */
+input:checked + .slider {
+  background-color: var(--accent-color);
+}
+
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+
+/* NAV STUFF */
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  height: var(--nav-height);
+}
+
+#rhs {
+  grid-column: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav h2 {
+  line-height: .5;
+  width: max-content;
+  /* font-family: var(--font-heading-light); */
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: .3;
+}
+
+nav div {
+  align-items: end;
+  padding: 0rem 1rem;
+}
+
+#toggle-content:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.contact {
+  grid-row: 2;
+  grid-column: 2;
+  font-weight: 500;
+  font-family: var(--font-secondary);
+}
+
+.contact li{
+  color: var(--text-color);
+}
+
+.contact a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contact-icon {
+  width: 16px;
+  margin-right: 3px;
+  filter: var(--bg-filter);
+}
+
+.contact .clickable:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* intro */
+
+.headshot {
+  max-width: 300px;
+  border-radius: 50%;
+  grid-column: 2;
+  align-self: flex-start;
+  justify-self: flex-start;
+  /* border: 1px solid black; */
+  /* box-shadow: 1 1 1; */
+  box-shadow: 0 0 10px var(--shadow-color);
+}
+
+#lhs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+
+.hi-im {
+  font-family: var(--font-heading-medium);
+  color: var(--accent-color);
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+  /* line-height: 6rem; */
+
+}
+
+.name {
+  font-family: var(--font-heading-bold);
+  font-size: 5rem;
+  line-height: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-weight: 100;
+  font-family: var(--font-heading-bold);
+  font-size: 5rem;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+
+/* MAIN CONTENT */
+
+
+.content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: start;
+  margin: 0 var(--content-margin);
+  gap: var(--grid-gap);
+}
+
+.card-container {
+  display: none;
+}
+
+.card-container.active {
+  display: flex;
+  grid-row: 2;
+  grid-column: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--grid-gap);
+  width: 100%; /* Ensure it stays inside its grid cell */
+}
+
+
+.card title {
+  display: inline-block;
+}
+.card {
+  width: 320px;
+  height: 360px;
+  position: relative; /* Ensures the image is positioned within */
+  /* border: 1px solid black; */
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px var(--shadow-color);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.card .bg-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+  opacity: 5%;
+  object-fit: contain;
+  filter: var(--bg-filter);
+  z-index: -1;
+}
+
+.card .gram {
+  opacity: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding: .5rem;;
+}
+
+.foot {
+  position: absolute;
+  top: 70%;
+  display: flex;
+  height: 30%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gram:hover {
+  opacity: 10%;
+}
+
+
+
+.card h3 {
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.card p {
+  font-size: .95rem;
+  font-family: var(--font-secondary);
+}
+
+/* #dafig img:hover {
+  cursor: pointer;
+  content: url('assets/dafig.png');
+  opacity: 100%;
+  height: 100%;
+  width: 100%;
+} */
+
+.tool-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: .5rem;
+}
+
+.tool {
+  display: inline;
+  padding: .2rem 0.3rem 0 0.3rem;
+  line-height: 1.1rem;
+  margin: 0.15rem;
+  font-weight: bold;
+  border-radius: 3px;
+  background-color: var(--accent-color-two);
+  color: white;
+}
+
+
+#filters {
+  text-align: left; /* Moves text left */
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+
+#filters ul,li {
+  list-style-type: none;
+  padding: 0; /* Remove default browser padding */
+  margin: 0; /* Extra safety */
+  width: max-content;
+  padding: 0px 4px;
+  list-style-position: inside; /* Ensures the bullet points are inside the box */
+  color: darkgrey;
+}
+
+#filters li{
+  display: inline-block;
+  width: auto;
+  padding: 0 .2rem;
+  margin: 0;
+}
+
+#filters ul {
+  padding: 0;
+  margin: 0;
+}
+
+#filters li:hover {
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.selected {
+  text-decoration: underline;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid black;
+  border-radius: 5px; */
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  padding: 0 .5rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+#back-to-top:hover {
+  text-decoration: underline;
+}
+
+
+/* LINKS */
+
+.external-links  {
+  display: flex;
+  flex-direction: row;
+}
+
+.link-icon {
+  width: 32px;
+  cursor: pointer;
+  filter: var(--bg-filter);
+  /* change z axis */
+}
+
+.waves {
+  margin-top: 2rem;
+  width: 100%;
+  filter: var(--bg-filter-dark);
+  z-index: -1;
+}
