@@ -449,7 +449,7 @@ h1 {
 
 .tool {
   display: inline;
-  padding: .2rem 0.3rem 0 0.3rem;
+  padding: .18rem 0.3rem .12rem 0.3rem;
   line-height: 1.1rem;
   margin: 0.15rem;
   font-weight: bold;
