@@ -406,9 +406,9 @@ h1 {
 
 .foot {
   position: absolute;
-  top: 70%;
+  top: 60%;
   display: flex;
-  height: 30%;
+  height: 40%;
   flex-direction: column;
   justify-content: space-between;
 }
