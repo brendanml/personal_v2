@@ -1,3 +1,5 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @font-face {
@@ -23,8 +25,10 @@
     /* Colors */
     --bg-color: #ffffff;
     --text-color: #222222;
+    --text-color-bottom: #ffffff;
     --accent-color: #0496FF;
     --accent-color-two: #0E273C;
+    --bottom-color: black;
     --shadow-color: grey;
     
     /* Typography */
@@ -37,6 +41,7 @@
     --line-height-base: 1.6;
     --bg-filter: brightness(1);
     --bg-filter-dark: brightness(1);
+    --bottom-filter: invert(88.1%) hue-rotate(90deg);
     
     /* Misc */
     --border-radius: 3px; /* Global radius for buttons, cards, etc. */
@@ -48,11 +53,76 @@
   .dark-mode {
     --bg-color: #1e1b1b;
     --text-color: #ffffff;
+    --bottom-color: #333333;
+    --text-color-bottom: #ffffff;
     --accent-color: #A167A5;
     --accent-color-two: #254a69;
     --shadow-color: rgb(72, 70, 70);
     --bg-filter: invert(88.1%) hue-rotate(90deg);
     --bg-filter-dark: invert(20%);
+    --bottom-filter: invert(88.1%) hue-rotate(90deg);
+  }
+
+  @media only screen and (max-width: 430px) {
+
+
+    .headshot {
+      width: 80px;
+      top: 80px;
+      right: 10px;
+      position: absolute;
+      justify-self: flex-end;
+      align-self: flex-start;
+      z-index: -1;
+    }
+  
+    .name {
+      font-size: 4rem !important;
+      line-height: 3.2rem !important;
+    }
+    /* .contact li > *:not(img) {
+        display: none;
+    } */
+
+    .contact {
+      display: none;
+    }
+
+    #darkmode-switch {
+      display: absolute;
+      top: 35px;
+      right: 10px;
+    }
+
+    nav {
+      height: .1rem;
+    }
+  
+    .contact-bottom {
+      display: flex !important;
+      flex-direction: column;
+      flex-wrap: wrap;
+      background-color: var(--bottom-color) !important;
+      padding-bottom: 1rem;
+      padding-left: .5rem;
+    }
+
+    .contact-bottom img {
+      filter: var(--bottom-filter) !important;
+    }
+    
+    .contact-bottom li {
+      color: var(--text-color-bottom) !important;
+      pad: .2rem;
+      font-family: var(--font-secondary) !important;
+    }
+  
+    .waves {
+      width: 120%;
+      z-index: -1;
+      margin: 0;
+    }
+  
   }
   
   
@@ -63,6 +133,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  .contact-bottom {
+    display: none;
   }
   
   html {
