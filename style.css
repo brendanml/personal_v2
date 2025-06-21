@@ -1,6 +1,4 @@
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
     --font-size: 16px;
     --spacing: 10px;
     --left-margin: 2rem;
@@ -8,48 +6,77 @@
 
 body {
     font-family:'Times New Roman', Times, serif;
-    width: 8.5in;
+    width: 9in;
     height: 11in;
     background-color: white;
-    /* border: 1px solid black;
-    box-shadow: 0px 0px 10px #888888; */
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 3rem;
 }
 
 a {
     all: unset;
 }
 
+/* change bullets */
 li::marker {
     font-size: 0.7rem;
 }
 
 /* personal info */
 
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.summary {
+    margin: .35rem 0 .35rem 0 ;
+    padding: 0;
+}
+
+.header .personal-info {
+    margin-right: 2rem;
+    margin-bottom: .5rem;
+}
+
+.header .job-title {
+    font-style: italic;
+    font-weight: normal;
+    color: rgb(31, 31, 31);
+    padding: 0;
+    margin: 0;
+}
+
+
+.header .name {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+/* contact section */
 .contact {
+    width: 100%;
+    font-size: 1.05rem;
+}
+
+.contact ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0;
-    list-style: none;
-    font-size: 1.05rem;
-    margin-bottom: 1rem;
 }
+
+
 
 .contact li {
-    margin: 0;
-    padding: .3rem;
-}
-
-/* .clickable:hover {
-    cursor: pointer;
-    box-shadow: 0px 0px 10px #888888;
-    border-radius: 5px;
-} */
-
-.name {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+    padding-top : 0.4rem;
+    white-space: nowrap;
 }
 
 /* section */
@@ -57,9 +84,15 @@ li::marker {
 .section-title {
     font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: .2rem;
+    margin-bottom: .4rem;
     border-bottom: 1.5px solid black;
     margin-top: 0;
+}
+
+.muted {
+    color: rgb(56, 55, 55);
+
+    font-weight: normal;
 }
 
 .section {
@@ -71,55 +104,40 @@ li::marker {
 
 
 /* subsection */
-.label {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 0;
-}
-
-.label .title {
-    grid-column: 1;
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
-.label .subtitle {
-    grid-column: 1;
-    font-style: italic;
-}
-
-.label .date {
-    grid-column: 2;
-    grid-row: 1;
-    text-align: right;
-}
-
-.label .location {
-    grid-column: 2;
-    grid-row: 2;
-    text-align: right;
-    font-style: italic;
-}
 
 .subsection {
-    margin-bottom: .4rem;
-    margin-top: .4rem;
-    padding: .5rem;
-    padding-top: .2rem;
-    border-radius: 2px;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    gap: 1rem;
+    margin-bottom: .8rem;
 }
 
-.certs {
+.subsection .title {
+    font-weight: bold;
+    font-size: 1.1rem;
     margin-top: 0;
 }
 
-.subsection ul{
-    margin-left: 0;
-    margin-top: 0.3rem;
-    padding-left: 1rem;
-    margin-bottom: 0;
+.subsection .subtitle {
+    font-style: italic;
+    margin-top: 0;
 }
 
-.project-list {
-    margin-right: 4rem;
+.description-list {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+    grid-column: span 2;
 }
+
+.lhs {
+ grid-column: 1;
+}
+
+.rhs {
+    grid-column: 2;
+}
+
+.rhs .location {
+    font-style: italic;
+} 

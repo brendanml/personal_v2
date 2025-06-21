@@ -1,118 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume</title>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-    <h1 class="name">Brendan Lynch</h1>
-    <ul class="contact">
-        <li class="">
-            hello@brendanml.com
-        </li>
-        <li>250-701-5417</li>
-        <li>Waterloo, ON</li>
-        <li class="">brendanml.com</li>
-        <li class="">github/brendanml</li>
-    </ul>
-    
-    <div class="section">
-        <h2 class="section-title">EDUCATION</h2>
-        <div class="subsection">
-            <div class="label">
-                <div class="title">University of Victoria</div>
-                <div class="subtitle">BSc in Computer Science</div>
-                <div class="date">Apr. 2021 - Jun. 2025</div>
-                <div class="location">Victoria, BC</div>
-            </div>
-        </div>
+  <div class="header">
+      <h1 class="name">Brendan Lynch</h1>
+      <h2 class="job-title">Full-Stack Engineer</h2>
+      <div class="contact">
+        <ul class="contact-list">
+          <li>hello@brendanml.com</li>
+          <li>250-701-5417</li>
+          <li>Waterloo, ON</li>
+          <li>brendanml.com</li>
+          <li>github/brendanml</li>
+        </ul>
+      </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">SUMMARY</h2>
+        <p class="summary">Passionate web developer focused on building single-page apps that enhance user experience. My workflow starts with quick sketches and a data model, then a Figma prototype, and finally an implementation with regular feedback. I follow WCAG guidelines to improve accessibility and SEO.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">EDUCATION</h2>
+    <div class="subsection">
+      <div class="lhs">
+        <div class="title">University of Victoria</div>
+        <div class="subtitle">BSc in Computer Science</div>
+      </div>
+      <div class="rhs">
+        <div class="date">04/2021 - 06/2025</div>
+        <div class="location">Victoria, BC</div>
+      </div>
     </div>
-    <div class="section">
-        <h2 class="section-title">PROJECTS</h2>
-        <div class="subsection ">
-            <div class="label">
-                <div class="title">rebiblio</div>
-                <div class="subtitle">Local book & board game exchange web application</div>
-                <div class="date">Mar. 2025</div>
-            </div>
-            <ul class="project-list">
-                <li>Implemented <b>end-end & integration tests</b> using <b>playwright & vitest</b> to ensure stability while scaling.</li>
-                <li>Developed a responsive <b>React</b> frontend with <b>Shadcn & Tailwindcss</b>.</li> 
-                <li>Wrote and developed <b>custom hooks</b> utilizing <b>useContext</b>, <b>Redux</b>, and <b>react-query</b> to ensure organized and responsive state management.</li>
-                <li>Integrated the Google Books & NYT <b>REST API</b> to keep book listings up-to-date.</li>
-                <li>Leveraged <b>Google Maps</b> & <b>Geocoding APIs</b> to enable location-based user matching.</li>
-                <li>Implemented a <b>MongoDB</b> database, allowing users to log in, list, favourite & connect with others.</li>
-                <li>Harnessed the power of <b>Node.js</b> and <b>Express.js</b> to build a high-performance backend with efficient routing, user validation, and session management.</li>
-            </ul>
-        </div>
-        
-        <div class="subsection ">
-                <div class="label">
-                    <div class="title">dafig</div>
-                    <div class="subtitle">Lego minifigure pricing analytics web application</div>
-                    <div class="date">Dec. 2024</div>
-                </div>
-                <ul class="project-list">
-                    <li>Integrated the public facing Bricklink <b>REST</b> API for real-time price retrieval.</li>
-                    <li>Migrated <b>python</b> web scraping microservice from <b>Selenium</b> to AsyncHTMLSession & <b>BS4</b> to efficiently fetch data not available from API.</li>
-                </ul>
-        </div>
-        
-        <div class="subsection ">
+  </div>
 
-                <div class="label">
-                    <div class="title">shallowmind</div>
-                    <div class="subtitle">Artificial intelligence chess game.</div>
-                    <div class="date">Aug. 2024</div>
-                </div>
-                <ul class="project-list"> 
-                    <li>Developed a chess AI game & bot using <b>C/C++</b> with Raylib.</li>
-                    <li>Implemented undo/redo functionality for flexible game state management.</li>
-                </ul>
-        </div>
+  <div class="section">
+    <h2 class="section-title">PROJECTS</h2>
 
-        </div>
-        <div class="section">
-            <h2 class="section-title">WORK EXPERIENCE</h2>
-        <div class="subsection">
-            <div class="label">
-                <div class="title">Canada Post Company</div>
-                <div class="subtitle">Letter Carrier</div>
-                <div class="date">Jun. 2020 – Sept. 2023</div>
-                <div class="location">Victoria, BC</div>
-            </div>
-            <ul class="project-list">
-                <li>Demonstrated strong time management, completing high volume delivery routes within strict deadlines.</li>
-                <li>Proven ability to work independently and reliably in a self-managed, performance based role.</li>
-                <li>Handled increased workloads during peak seasons, staying on schedule and maintaining accuracy under pressure.</li>
-            </ul>
-        </div>
-        </div>
-        <div class="section">
-            <h2 class="section-title">CERTIFICATIONS</h2>
-                <div class="subsection">
-            <div class="label">
-                <div class="title">University of Helsinki</div>
-                <div class="subtitle">Full Stack Open</div>
-                <div class="date">Sept. 2024 - Feb. 2025</div>
-                <div class="location">Online</div>
-            </div>
-            <ul>
-                <li>React, MongoDB, Express, Node, Redux, React Router, Custom hooks, Playwright, Vitest.</li>
-            </ul>
-        </div>
-        </div>
-        
-        <div class="section">
-            <h2 class="section-title">VOLUNTEERING & INTERESTS</h2>
-            <div class="subsection certs">
-                <ul class="project-list">
-                    <li><b>Volunteering</b>: Member at the Rotary Club of Waterloo.</li>
-                    <li><b>Interests</b>: Squash, Yoga, Cycling, Videography, Electronics, Lego, Pottery, Woodworking.</li>
-                </ul>
-            </div>
-        </div>
+    <div class="subsection">
+      <div class="lhs">
+        <div class="title">Rebiblio: <span class="muted">Book Exchange Web Application.</span></div>
+        <div class="subtitle">Lead Full-Stack Engineer</div>
+        <ul class="description-list">
+          <li>Reduced downtimes by 80% by implementing <b>end-to-end</b> tests with <b>Playwright</b>, ensuring stability while scaling.</li>
+          <li>Improved frontend responsiveness by 200% by migrating the frontend to <b>React</b>.</li>
+          <li>Reduced custom CSS code by 70% by migrating to Tailwind CSS and Shadcn, improving maintainability and consistency.</li>
+          <li>Refactored frontend codebase by introducing context and hooks architecture, reducing duplicated logic by 50% and improving state management clarity.</li>
+          <li>Integrated the Google Books and Google Maps <b>REST APIs</b>, increasing uptime by 200%.</li>
+          <li>Improved MongoDB write performance by 60% by replacing multiple individual operations with bulk writes.</li>
+        </ul>
+    </div>
+    <div class="rhs">
+        <div class="date">03/2025 - 04/2025</div>
+        <div class="location">Waterloo, ON</div>
+    </div>
+    </div>
+
+    <div class="subsection">
+      <div class="lhs">
+        <div class="title">Dafig: <span class="muted">Lego Minifigure Pricing Analytics Web Application.</span></div>
+        <div class="subtitle">Backend Engineer</div>
+        <ul class="description-list">
+        <li>Refactored backend by organizing endpoints into Express.js routes, reducing codebase clutter</li>
+          <li>Improved pricing accuracy by replacing outdated JSON data with real-time updates from the BrickLink <b>REST API</b>.</li>
+          <li>Migrated Python web scraping microservice from <b>Selenium</b> to asynchronous HTML sessions with <b>BeautifulSoup4</b> to fetch data not available via API.</li>
+        </ul>
+      </div>
+      <div class="rhs">
+        <div class="date">12/2024 - 02/2025</div>
+        <div class="location">Victoria, BC</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">WORK EXPERIENCE</h2>
+    <div class="subsection">
+      <div class="lhs">
+        <div class="title">Canada Post Company</div>
+        <div class="subtitle">Letter Carrier</div>
+        <ul class="description-list">
+          <li>Improved delivery times by 160%, reducing parcel wait times from 5 PM to no later than 2 PM.</li>
+          <li>Exercised strong time management, completing high-volume delivery routes within strict deadlines.</li>
+          <li>Proven ability to work independently and reliably in a self-managed, performance-based role.</li>
+          <li>Handled increased workloads during peak seasons, staying on schedule and maintaining accuracy under pressure.</li>
+        </ul>
+      </div>
+      <div class="rhs">
+        <div class="date">06/2020 - 09/2023</div>
+        <div class="location">Victoria, BC</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">CERTIFICATIONS</h2>
+    <div class="subsection">
+      <div class="lhs">
+        <div class="title">University of Helsinki</div>
+        <div class="subtitle">Full Stack Open</div>
+        <ul class="description-list">
+          <li>React, Node.js, Express.js, MongoDB, Redux, React Router, Contexts, Custom Hooks, Playwright, Vitest, GraphQL, CI/CD Pipelines.</li>
+        </ul>
+      </div>
+      <div class="rhs">
+        <div class="date">09/2024 - 02/2025</div>
+        <div class="location">Online</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">SKILLS</h2>
+    <div class="subsection">
+      <ul class="description-list">
+        <li>Languages: <b>JavaScript</b>, <b>TypeScript</b>, <b>Python</b>, C/C++, HTML, CSS.</li>
+        <li>Frameworks: <b>React</b>, <b>Node.js</b>, <b>Express.js</b>, <b>Shadcn</b>, <b>Tailwind CSS</b>.</li>
+        <li>Databases: <b>MongoDB</b>, SQL.</li>
+        <li>Tools: <b>Git</b>, Postman, <b>Docker</b>.</li>
+        <li>Testing: <b>Playwright</b>, Vitest.</li>
+        <li>APIs: <b>REST</b>, <b>GraphQL</b>.</li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
