@@ -126,7 +126,8 @@ li::marker {
 .description-list {
     margin: 0;
     padding: 0;
-    list-style-position: inside;
+    list-style-position: outside;
+    padding-left: 1.2rem;
     grid-column: span 2;
 }
 
